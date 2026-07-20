@@ -1,0 +1,5 @@
+name : deploy portifolio website
+on:
+  push:
+    branches:
+      - main
