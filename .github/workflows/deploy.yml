@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,14 +16,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::<637423389066>:role/CICDROLL
+          role-to-assume: arn:aws:iam::637423389066:role/CICDROLL
           aws-region: ap-south-1
-          name: Upload Website to S3
 
-          run: aws s3 sync website/ s3://portifolio-s3-website-bucket --delete
+      - name: Upload Website to S3
+        run: aws s3 sync website/ s3://portifolio-s3-website-bucket --delete
+
       - name: Invalidate CloudFront Cache
         run: |
           aws cloudfront create-invalidation \
