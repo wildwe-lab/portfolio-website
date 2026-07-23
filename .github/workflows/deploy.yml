@@ -1,4 +1,4 @@
-name: deploy portfolio website
+name: Deploy Portfolio Website
 
 on:
   push:
@@ -25,10 +25,10 @@ jobs:
 
       - name: Upload Website to S3
         run: |
-         aws s3 sync . s3://portfolio-s3-website-bucket \
-         --delete \
-         --exclude ".git/*" \
-         --exclude ".github/*"
+          aws s3 sync . s3://portifolio-s3-website-bucket \
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*"
 
       - name: Invalidate CloudFront Cache
         run: |
