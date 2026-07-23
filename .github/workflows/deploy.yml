@@ -24,7 +24,11 @@ jobs:
           aws-region: ap-south-1
 
       - name: Upload Website to S3
-        run: aws s3 sync website/ s3://portifolio-s3-website-bucket --delete
+        run: |
+         aws s3 sync . s3://portfolio-s3-website-bucket \
+         --delete \
+         --exclude ".git/*" \
+         --exclude ".github/*"
 
       - name: Invalidate CloudFront Cache
         run: |
