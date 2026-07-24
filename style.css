@@ -66,7 +66,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
   padding-top: 150px;
 }
 .hero-content, .cloud-console { position: relative; z-index: 2; }
-.hero h1 { font-size: clamp(3.4rem, 7.4vw, 7.2rem); line-height: .94; letter-spacing: -0.065em; margin: 12px 0 22px; max-width: 850px; }
+.hero h1 {
+    font-size: clamp(3.4rem, 7.4vw, 7.2rem);
+    line-height: .94;
+    letter-spacing: -0.065em;
+    margin: 12px 0 22px;
+}
 .hero h2 { font-size: clamp(1.35rem, 2.5vw, 2.2rem); color: var(--orange-soft); margin: 0 0 24px; }
 .hero-copy { max-width: 700px; color: var(--muted); font-size: clamp(1.02rem, 1.4vw, 1.22rem); }
 .eyebrow { color: var(--orange); font-weight: 900; font-size: .78rem; letter-spacing: .18em; margin: 0 0 12px; }
@@ -161,7 +166,13 @@ footer { max-width:1400px; margin:auto; padding:30px clamp(22px,7vw,110px) 45px;
   .main-nav.open { display:flex; }
   .main-nav a { padding:12px; }
   .hero { padding-top:120px; }
-  .hero h1 { font-size:clamp(3rem,16vw,4.8rem); }
+  .hero h1 {
+    font-size: clamp(3rem, 6vw, 4.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
   .about-grid, .stats-grid, .skills-grid { grid-template-columns:1fr; }
   .cert-card { grid-template-columns:1fr; text-align:center; }
   .cert-card img { margin:auto; }
