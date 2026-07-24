@@ -129,7 +129,50 @@
         <p class="eyebrow">PROJECTS</p>
         <h2>Hands-on AWS implementations.</h2>
       </div>
+<article class="project-card reveal">
+  <div class="project-visual project-diagram">
+    <img
+      src="assets/architecture-cicd.svg"
+      alt="Diagram showing GitHub repository triggering GitHub Actions, assuming an IAM Role through OIDC, deploying to Amazon S3, and invalidating Amazon CloudFront."
+    />
+  </div>
 
+  <div class="project-content">
+    <p class="card-label">CONTINUOUS INTEGRATION & DEPLOYMENT</p>
+
+    <h3>GitHub Actions CI/CD Pipeline for AWS</h3>
+
+    <p>
+      Designed and implemented a secure CI/CD pipeline using GitHub Actions to
+      automate website deployments to AWS. The workflow authenticates using
+      GitHub OIDC and an AWS IAM Role, eliminating the need for long-term AWS
+      access keys. Every push to the main branch automatically checks out the
+      repository, uploads updated files to Amazon S3, and invalidates the
+      Amazon CloudFront cache to ensure users receive the latest version of the
+      website.
+    </p>
+
+    <div class="tag-list">
+      <span>GitHub Actions</span>
+      <span>CI/CD</span>
+      <span>OIDC</span>
+      <span>IAM</span>
+      <span>AWS CLI</span>
+      <span>Amazon S3</span>
+      <span>CloudFront</span>
+      <span>YAML</span>
+    </div>
+
+    <a
+      class="button button-small"
+      href="https://github.com/wildwe-lab/portfolio-website"
+      target="_blank"
+      rel="noopener"
+    >
+      View on GitHub
+    </a>
+  </div>
+</article>
       <div class="project-list">
         <article class="project-card reveal">
           <div class="project-visual project-diagram">
