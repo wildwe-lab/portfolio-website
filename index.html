@@ -36,13 +36,13 @@
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#projects">View Projects</a>
-          <a <a href="assets/Ahmed-Hassan-CV.pdf"
-   class="button button-secondary"
-   target="_blank"
-   download>
-  Download Resume
-</a>
-</a>
+          <a href="assets/Ahmed-Hassan-CV.pdf"
+             class="button button-secondary"
+             target="_blank"
+             rel="noopener"
+             download>
+            Download Resume
+          </a>
         </div>
         <div class="quick-links" aria-label="Professional links">
           <a href="https://github.com/wildwe-lab" target="_blank" rel="noopener">GitHub</a>
@@ -88,7 +88,7 @@
       </div>
       <div class="stats-grid reveal">
         <article><strong>2</strong><span>AWS Certifications</span></article>
-        <article><strong>3</strong><span>Published AWS Projects</span></article>
+        <article><strong>4</strong><span>Published AWS Projects</span></article>
         <article><strong>100%</strong><span>Cloud-Focused Portfolio</span></article>
       </div>
     </section>
@@ -131,6 +131,26 @@
       </div>
 
       <div class="project-list">
+        <article class="project-card reveal">
+          <div class="project-visual project-diagram">
+            <img src="assets/architecture-static.svg" alt="Architecture diagram showing a portfolio website deployed from GitHub Actions to a private Amazon S3 bucket and delivered globally through Amazon CloudFront." />
+          </div>
+          <div class="project-content">
+            <p class="card-label">AUTOMATED CLOUD DEPLOYMENT</p>
+            <h3>Portfolio Website with GitHub Actions CI/CD</h3>
+            <p>
+              Designed and deployed this personal portfolio website using a private Amazon S3 bucket and Amazon CloudFront.
+              Built a GitHub Actions CI/CD workflow that automatically checks out the repository, authenticates securely to AWS
+              through OIDC, assumes an IAM role, synchronizes website files to S3, and invalidates the CloudFront cache after every
+              push to the <code>main</code> branch.
+            </p>
+            <div class="tag-list">
+              <span>GitHub Actions</span><span>Amazon S3</span><span>CloudFront</span><span>OIDC</span><span>IAM</span><span>AWS CLI</span><span>CI/CD</span>
+            </div>
+            <a class="button button-small" href="https://github.com/wildwe-lab/portfolio-website" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+
         <article class="project-card reveal">
           <div class="project-visual project-diagram">
             <img src="assets/architecture-static.svg" alt="Diagram showing a visitor connecting to CloudFront, which securely retrieves content from a private S3 bucket through Origin Access Control." />
